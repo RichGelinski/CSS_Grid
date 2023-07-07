@@ -1,0 +1,48 @@
+.container {
+    background-color: #ccc;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+        "header header header header"
+        "menu content content content"
+        "footer footer footer ad"
+    ;
+}
+.item {
+    background-color: blueviolet;
+    border-radius: 10px;
+    padding: 20px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    grid-area: header;
+}
+nav {
+    grid-area: menu;
+}
+section {
+    grid-area: content;
+}
+footer {
+    grid-area: footer;
+}
+.ad {
+    grid-area: ad;
+}
+
+@media (max-width: 750px) {
+    .container {
+        grid-template-areas: 
+            "header header header menu"
+            "content content content content"
+            "ad ad ad ad"
+            "footer footer footer footer"
+        ;
+    }
+}
